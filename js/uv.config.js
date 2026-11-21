@@ -3,9 +3,9 @@ self.__uv$config = {
 	bare: '/bare/',
 	encodeUrl: Ultraviolet.codec.xor.encode,
 	decodeUrl: Ultraviolet.codec.xor.decode,
-	handler: '/@/uv.handler.js',
-	client: '/@/uv.client.js',
-	bundle: '/@/uv.bundle.js',
-	config: '/@/uv.config.js',
-	sw: '/@/uv.sw.js'
+	handler: '/u.handler.js',
+	client: '/u.client.js',
+	bundle: '/u.bundle.js',
+	config: '/uv.config.js',
+	sw: '/u.sw.js'
 };
