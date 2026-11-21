@@ -37,7 +37,7 @@ const swConfig = {
 
 const { type: swType, file: swFile, config: swConfigSettings, func: swFunction } = swConfig[proxySetting] ?? {
 	type: 'sw',
-	file: '/@/sw.js',
+	file: '/sw.js',
 	config: __uv$config,
 	func: null
 };
@@ -63,12 +63,12 @@ async function setTransports() {
 	const transports =
 		localStorage.getItem('dropdown-selected-text-transport') || 'Epoxy';
 	try {
-		if (transports === 'Libcurl') {
-			await connection.setTransport('/libcurl/index.mjs', [{ wisp: wispUrl }]);
+		if (transports === 'Epox') {
+			await connection.setTransport('https://cdn.jsdelivr.net/gh/rhenryw/UV-Static-2.0@main/active/prxy/epoxy/index.mjs', [{ wisp: wispUrl }]);
 		} else if (transports === 'Epoxy') {
-			await connection.setTransport('/epoxy/index.mjs', [{ wisp: wispUrl }]);
+			await connection.setTransport('https://cdn.jsdelivr.net/gh/rhenryw/UV-Static-2.0@main/active/prxy/epoxy/index.mjs', [{ wisp: wispUrl }]);
 		} else {
-			await connection.setTransport('/libcurl/index.mjs', [{ wisp: wispUrl }]);
+			await connection.setTransport('https://cdn.jsdelivr.net/gh/rhenryw/UV-Static-2.0@main/active/prxy/epoxy/index.mjs', [{ wisp: wispUrl }]);
 		}
 	} catch (e) {
 		console.error('setTransport failed:', e);
