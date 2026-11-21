@@ -16,7 +16,7 @@ const proxySetting =
 const swConfig = {
 	'Ultraviolet': { 
 		type: 'sw',
-		file: '/@/sw.js', 
+		file: '/sw.js', 
 		config: __uv$config,
 		func: null
 	},
